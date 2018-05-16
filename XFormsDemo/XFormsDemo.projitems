@@ -35,6 +35,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)GridLoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -60,6 +64,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)DialPadPage.xaml.cs">
       <DependentUpon>DialPadPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)GridLoginPage.xaml.cs">
+      <DependentUpon>GridLoginPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

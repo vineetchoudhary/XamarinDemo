@@ -11,7 +11,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
 
-			MainPage = new DialPadPage();
+			MainPage = new GridLoginPage();
         }
 
         protected override void OnStart()
