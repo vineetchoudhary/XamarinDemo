@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.DialPadPage">
+    <Grid Style="{StaticResource gridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label x:Name="NumberLabel" 
+               Grid.Row="0"
+               Grid.ColumnSpan="3"
+               Text="9876543210"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Style="{StaticResource dialNumberLabel}"></Label>
+
+        <Button Grid.Row="1"
+                Grid.Column="0"
+                Text="1"
+                Style="{StaticResource dialPadButtonStyle}"></Button>
+        <Button Grid.Row="1"
+                Grid.Column="1"
+                Text="2"
+                Style="{StaticResource dialPadButtonStyle}"></Button>
+        <Button Grid.Row="1"
+                Grid.Column="2"
+                Text="3"
+                Style="{StaticResource dialPadButtonStyle}"></Button>
+        <Button Grid.Row="2"
+                Grid.Column="0"
+                Text="4"
+                Style="{StaticResource dialPadButtonStyle}"></Button>
+        <Button Grid.Row="2"
+                Grid.Column="1"
+                Text="5"
+                Style="{StaticResource dialPadButtonStyle}"></Button>
+        <Button Grid.Row="2"
+                Grid.Column="2"
+                Text="6"
+                Style="{StaticResource dialPadButtonStyle}"></Button>
+        <Button Grid.Row="3"
+                Grid.Column="0"
+                Text="7"
+                Style="{StaticResource dialPadButtonStyle}"></Button>
+        <Button Grid.Row="3"
+                Grid.Column="1"
+                Text="8"
+                Style="{StaticResource dialPadButtonStyle}"></Button>
+        <Button Grid.Row="3"
+                Grid.Column="2"
+                Text="9"
+                Style="{StaticResource dialPadButtonStyle}"></Button>
+        <Button Grid.Row="4"
+                Grid.Column="1"
+                Text="0"
+                Style="{StaticResource dialPadButtonStyle}"></Button>
+        <Button Grid.Row="5"
+                Grid.ColumnSpan="3"
+                Text="Dial"
+                Style="{StaticResource dialButtonStyle}"></Button>
+        
+    </Grid>
+</ContentPage>

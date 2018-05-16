@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XFormsDemo.App">
+    <Application.Resources>
+        <!--Common Resources-->
+        <ResourceDictionary>
+            <Color x:Key="pageBackgroundColor">#127ac7</Color>
+            <Color x:Key="buttonBackgroundColor">#1dabf0</Color>
+            <Color x:Key="labelTextColor">#FFFFFF</Color>
+            <Color x:Key="labelDarkTextColor">#000000</Color>
+            <Color x:Key="lineColor">#F0F0F0</Color>
+        </ResourceDictionary>
+        
+        <!--Dial Pad Resources-->
+        <ResourceDictionary>
+            <!--Colors-->
+            <Color x:Key="dialPadBackgroundColor">#354242</Color>
+            <Color x:Key="dialPadButtonBackgroundColor">#FFFFFF</Color>
+            <Color x:Key="dialPadPrimaryTextColor">#28282c</Color>
+            <Color x:Key="dialButtonBackgroundColor">#96ca2d</Color>
+            <Color x:Key="dialButtonTextColor">#000000</Color>
+
+            <!--Styles-->
+            <Style x:Key="gridStyle" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="{StaticResource dialPadBackgroundColor}"></Setter>
+                <Setter Property="Padding" Value="40"></Setter>
+                <Setter Property="RowSpacing" Value="10"></Setter>
+                <Setter Property="ColumnSpacing" Value="10"></Setter>
+            </Style>
+            <Style x:Key="dialPadButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="30"></Setter>
+                <Setter Property="TextColor" Value="{StaticResource dialPadPrimaryTextColor}"></Setter>
+                <Setter Property="BackgroundColor" Value="{StaticResource dialPadButtonBackgroundColor}"></Setter>
+                <Setter Property="BorderRadius" Value="30"></Setter>
+            </Style>
+            <Style x:Key="dialButtonStyle" TargetType="Button" BaseResourceKey="dialPadButtonStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource dialButtonBackgroundColor}"></Setter>
+                <Setter Property="TextColor" Value="{StaticResource dialButtonTextColor}"></Setter>
+            </Style>
+            <Style x:Key="dialNumberLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="40"></Setter>
+                <Setter Property="TextColor" Value="{StaticResource dialPadButtonBackgroundColor}"></Setter>
+            </Style>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

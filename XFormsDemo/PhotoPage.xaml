@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.PhotoPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" 
+                    iOS="0, 20, 0, 0"></OnPlatform>
+    </ContentPage.Padding>
+
+    <ScrollView>
+        <StackLayout Padding="10, 0">
+            
+            <Label Margin="0, 10" 
+                   Text="@teenvineet"></Label>
+            
+            <Image Margin="-10, 0" 
+                   Source="http://lorempixel.com/1920/1080/nature/4/"></Image>
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Like"></Button>
+                <Button Text="Comment"></Button>
+                <Button Text="Share"></Button>
+            </StackLayout>
+            
+            <BoxView HeightRequest="1" 
+                     BackgroundColor="{StaticResource lineColor}"></BoxView>
+
+            <Label Text="700 likes"
+                   TextColor="{StaticResource labelDarkTextColor}"></Label>
+            
+            <Label Text="Money is the wealthy man's curtain which hides all his defects from the world." ></Label>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

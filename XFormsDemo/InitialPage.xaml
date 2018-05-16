@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.InitialPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+
+    <!--Set Content Page Padding-->
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                    Android="0, 10, 0, 0"
+                    Default="0, 5, 0, 0"></OnPlatform>
+    </ContentPage.Padding>
+    
+    <!--Main Stack Layout-->
+    <StackLayout x:Name="MainStack" 
+                 BindingContext="{x:Reference Slider}"
+                 HorizontalOptions="Center">
+        
+        <!--Box View-->
+        <BoxView x:Name="BoxView"
+                 Color="Black"
+                 Opacity="{Binding Value}" WidthRequest="200"></BoxView>
+        
+        <!--Label-->
+        <Label x:Name="Label" 
+               Text="{Binding Value, StringFormat='{0:F2}'}"></Label>
+        
+        <!--Slider-->
+        <Slider x:Name="Slider" 
+                Value="0.52"></Slider>
+    </StackLayout>
+</ContentPage>

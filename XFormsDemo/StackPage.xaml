@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.StackPage"
+             Padding="10, 20, 10, 10"
+             BackgroundColor="{StaticResource pageBackgroundColor}">
+    <StackLayout VerticalOptions="Center">
+        
+        <Label FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource labelTextColor}"
+               Text="Welcome to Xamarian"></Label>
+        
+        <Label FontSize="18"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource labelTextColor}"
+               Text="Cross-platform apps made easy"></Label>
+        
+        <BoxView HeightRequest="50"></BoxView>
+        
+        <Button x:Name="LoginButton" 
+                BackgroundColor="{StaticResource buttonBackgroundColor}"
+                TextColor="{StaticResource labelTextColor}"
+                Text="Login"></Button>
+        
+        <Button x:Name="RegisterButton"
+                BackgroundColor="{StaticResource buttonBackgroundColor}"
+                TextColor="{StaticResource labelTextColor}"
+                Text="Register"></Button>
+        
+    </StackLayout>
+</ContentPage>
