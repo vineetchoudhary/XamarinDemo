@@ -5,7 +5,15 @@
              BackgroundColor="{StaticResource pageBackgroundColor}"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true">
-    
+            <Button x:Name="LoginButton" 
+                BackgroundColor="{StaticResource buttonBackgroundColor}"
+                TextColor="{StaticResource labelTextColor}"
+                Text="Login"></Button>
+        
+        <Button x:Name="RegisterButton"
+                BackgroundColor="{StaticResource buttonBackgroundColor}"
+                TextColor="{StaticResource labelTextColor}"
+                Text="Register"></Button>
     <Grid Padding="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -22,7 +30,7 @@
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
                    TextColor="{StaticResource labelTextColor}"
-                   Text="Welcome to Xamarian"></Label>
+                   Text="Welcome to Xamarin"></Label>
         
             <Label FontSize="18"
                    HorizontalOptions="Center"

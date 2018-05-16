@@ -10,7 +10,7 @@
                FontAttributes="Bold"
                HorizontalOptions="Center"
                TextColor="{StaticResource labelTextColor}"
-               Text="Welcome to Xamarian"></Label>
+               Text="Welcome to Xamarin"></Label>
         
         <Label FontSize="18"
                HorizontalOptions="Center"
