@@ -11,7 +11,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
 
-			MainPage = new GridLoginPage();
+			MainPage = new AbsoluteLayoutPage();
         }
 
         protected override void OnStart()

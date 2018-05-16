@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XFormsDemo.App">
     <Application.Resources>
-        <!--Common Resources-->
         <ResourceDictionary>
+            <!--Common Resources-->
             <Color x:Key="pageBackgroundColor">#127ac7</Color>
             <Color x:Key="buttonBackgroundColor">#1dabf0</Color>
             <Color x:Key="labelTextColor">#FFFFFF</Color>
             <Color x:Key="labelDarkTextColor">#000000</Color>
             <Color x:Key="lineColor">#F0F0F0</Color>
-        </ResourceDictionary>
-        
-        <!--Dial Pad Resources-->
-        <ResourceDictionary>
+            
+            <!--Dial Pad Resources-->
             <!--Colors-->
             <Color x:Key="dialPadBackgroundColor">#354242</Color>
             <Color x:Key="dialPadButtonBackgroundColor">#FFFFFF</Color>

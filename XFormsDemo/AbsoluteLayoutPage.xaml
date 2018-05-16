@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.AbsoluteLayoutPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"></OnPlatform>
+    </ContentPage.Padding>
+    <AbsoluteLayout>
+        <BoxView Color="{StaticResource pageBackgroundColor}"
+                 AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                 AbsoluteLayout.LayoutFlags="All"></BoxView>
+        
+        <BoxView Color="{StaticResource buttonBackgroundColor}"
+                 AbsoluteLayout.LayoutBounds="0.5, 0.1, 100, 100"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"></BoxView>
+        
+        <Button BackgroundColor="{StaticResource buttonBackgroundColor}"
+                TextColor="{StaticResource labelTextColor}"
+                Text="Get Started"
+                AbsoluteLayout.LayoutBounds="0, 1, 1, 50"
+                AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"></Button>
+    </AbsoluteLayout>
+</ContentPage>
