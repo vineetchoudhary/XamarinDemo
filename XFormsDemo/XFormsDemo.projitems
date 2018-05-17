@@ -51,6 +51,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)RelativeLayoutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -88,6 +92,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)AbsoluteLayoutImagePage.xaml.cs">
       <DependentUpon>AbsoluteLayoutImagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)RelativeLayoutPage.xaml.cs">
+      <DependentUpon>RelativeLayoutPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>
