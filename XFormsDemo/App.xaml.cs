@@ -11,7 +11,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
 
-			MainPage = new AbsoluteLayoutPage();
+			MainPage = new AbsoluteLayoutImagePage();
         }
 
         protected override void OnStart()

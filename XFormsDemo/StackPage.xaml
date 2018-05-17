@@ -27,7 +27,7 @@
         <Button x:Name="RegisterButton"
                 BackgroundColor="{StaticResource buttonBackgroundColor}"
                 TextColor="{StaticResource labelTextColor}"
-                Text="Register"></Button>
+                Text="Sing Up"></Button>
         
     </StackLayout>
 </ContentPage>
