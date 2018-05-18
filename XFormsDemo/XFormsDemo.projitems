@@ -55,6 +55,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)RelativeLayoutCartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)RelativeLayoutComplexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ImageURIPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\RLComplex\CoverImage.jpg">
+      <IncludeInPackage>false</IncludeInPackage>
+      <LogicalName>CoverImage.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ButtonImagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -96,5 +116,23 @@
     <Compile Include="$(MSBuildThisFileDirectory)RelativeLayoutPage.xaml.cs">
       <DependentUpon>RelativeLayoutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)RelativeLayoutCartPage.xaml.cs">
+      <DependentUpon>RelativeLayoutCartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)RelativeLayoutComplexPage.xaml.cs">
+      <DependentUpon>RelativeLayoutComplexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ImageURIPage.xaml.cs">
+      <DependentUpon>ImageURIPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AppImages\AppImages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ButtonImagePage.xaml.cs">
+      <DependentUpon>ButtonImagePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\RLComplex\" />
+    <Folder Include="$(MSBuildThisFileDirectory)AppImages\" />
   </ItemGroup>
 </Project>

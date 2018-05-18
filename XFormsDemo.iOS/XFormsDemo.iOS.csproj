@@ -139,6 +139,11 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\clock.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\clock.imageset\clock.png" />
+    <ImageAsset Include="Resources\Media.xcassets\clock.imageset\clock%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\clock.imageset\clock%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -151,6 +156,21 @@
     <PackageReference Include="Xamarin.TestCloud.Agent">
       <Version>0.21.5</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>2.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>1.6.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>1.6.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter">
+      <Version>1.6.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Media.xcassets\clock.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\XFormsDemo\XFormsDemo.projitems" Label="Shared" />

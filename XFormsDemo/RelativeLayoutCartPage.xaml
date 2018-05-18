@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.RelativeLayoutCartPage">
+    <RelativeLayout>
+        <StackLayout x:Name="cartStackLayout"
+                 BackgroundColor="#F0F0F0"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3 }"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand">
+                <Label x:Name="currentAmmountLabel" 
+                       Text="$11.95"
+                       FontSize="60"
+                       TextColor="#33353a"
+                       HorizontalOptions="Center"></Label>
+                <Button x:Name="addCreditButton"
+                        Text="Add $7.99 Credit"
+                        BackgroundColor="#1695A3"
+                        BorderRadius="12"
+                        TextColor="White"
+                        HeightRequest="40"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"></Button>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout x:Name="descStackLayout"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3, Constant=30}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+            <Label x:Name="titleLabel"
+                   Font="15"
+                   FontAttributes="Bold"
+                   Text="Why pay for credit?"
+                   HorizontalTextAlignment="Center"></Label>
+
+            <Label x:Name="descLabel"
+                   Font="13"
+                   HorizontalTextAlignment="Center"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLabel, Property=Height, Factor=1}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+Because you can reach people who aren’t on 
+SkyApp by calling mobile and landline 
+numbers, or spending SMS, at low-cost rates.
+            </Label>
+            
+        </StackLayout>
+    </RelativeLayout>
+</ContentPage>

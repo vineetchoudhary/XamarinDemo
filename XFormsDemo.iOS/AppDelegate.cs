@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using ImageCircle.Forms.Plugin.iOS;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using UIKit;
 
 namespace XFormsDemo.iOS
@@ -24,7 +28,10 @@ namespace XFormsDemo.iOS
         {
             Xamarin.Calabash.Start();
             global::Xamarin.Forms.Forms.Init();
+			ImageCircleRenderer.Init();
+
             LoadApplication(new App());
+			AppCenter.Start("fd753d57-8fae-4977-91f3-df889f2db996", typeof(Analytics), typeof(Crashes));
 
             return base.FinishedLaunching(app, options);
         }
