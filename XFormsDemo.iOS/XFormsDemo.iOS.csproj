@@ -144,6 +144,12 @@
     <ImageAsset Include="Resources\Media.xcassets\clock.imageset\clock.png" />
     <ImageAsset Include="Resources\Media.xcassets\clock.imageset\clock%402x.png" />
     <ImageAsset Include="Resources\Media.xcassets\clock.imageset\clock%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\leftarrow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\leftarrow.imageset\leftarrow%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\leftarrow.imageset\leftarrow%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\rightarrow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\rightarrow.imageset\rightarrow%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\rightarrow.imageset\rightarrow%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -171,6 +177,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Media.xcassets\clock.imageset\" />
+    <Folder Include="Resources\Media.xcassets\leftarrow.imageset\" />
+    <Folder Include="Resources\Media.xcassets\rightarrow.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\XFormsDemo\XFormsDemo.projitems" Label="Shared" />

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFormsDemo.AppImages"
+             x:Class="XFormsDemo.ImageListPage">
+    <RelativeLayout BindingContext="{x:Reference image}">
+        <Grid x:Name="controlsGrid" 
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}">
+            <Button x:Name="prveButton"
+                    Text="Prev"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    BackgroundColor="Transparent"
+                    IsEnabled="{Binding IsLoading, Converter={local:InverseBoolConverter}}"
+                    Clicked="PrevButton_Handle_Clicked"></Button>
+            <ActivityIndicator x:Name="activityIndicator"
+                               IsRunning="true"
+                               Grid.Row="0"
+                               Grid.Column="1"
+                               HeightRequest="50"
+                               HorizontalOptions="CenterAndExpand"
+                               IsVisible="{Binding IsLoading}"></ActivityIndicator>
+            <Button x:Name="nextButton"
+                    Text="Next"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    BackgroundColor="Transparent"
+                    IsEnabled="{Binding IsLoading, Converter={local:InverseBoolConverter}}"
+                    Clicked="NextButton_Handle_Clicked"></Button>
+        </Grid>
+        <Image x:Name="image"
+               IsEnabled="{Binding IsLoading, Converter={local:InverseBoolConverter}}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=controlsGrid, Property=Height, Factor=1}">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Handle_Tapped"></TapGestureRecognizer>
+            </Image.GestureRecognizers>
+        </Image>
+    </RelativeLayout>
+</ContentPage>
