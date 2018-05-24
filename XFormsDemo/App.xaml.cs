@@ -1,6 +1,9 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XFormsDemo.Navigations;
+using XFormsDemo.MasterDetails;
+using XFormsDemo.TabBarView;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XFormsDemo
@@ -11,7 +14,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
 
-			MainPage = new ImageListPage();
+			MainPage = new TabBarPage();
         }
 
         protected override void OnStart()

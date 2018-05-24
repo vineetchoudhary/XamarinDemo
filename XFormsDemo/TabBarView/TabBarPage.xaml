@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            x:Class="XFormsDemo.TabBarView.TabBarPage"
+            xmlns:navigations="clr-namespace:XFormsDemo.Navigations"
+            xmlns:masterDetails="clr-namespace:XFormsDemo.MasterDetails"
+            xmlns:tabBarPage="clr-namespace:XFormsDemo.TabBarView"
+            BackgroundColor="{Binding Source=navigationPage, Path=BarBackgroundColor}">
+    <NavigationPage x:Name="navigationPage" 
+                    Title="Contact" 
+                    BackgroundColor="White">
+        <x:Arguments>
+            <masterDetails:ContactPage></masterDetails:ContactPage>
+        </x:Arguments>
+    </NavigationPage>
+    <navigations:IntroductionPage Title="Introduction" BackgroundColor="White"></navigations:IntroductionPage>
+</TabbedPage>

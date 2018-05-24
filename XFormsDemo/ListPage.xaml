@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.ListPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+    <StackLayout>
+        <SearchBar Placeholder="Search" 
+                   BackgroundColor="#f0f0f0"
+                   TextChanged="Handle_TextChanged"></SearchBar>
+        <ListView x:Name="listView" 
+                  SeparatorColor="Green"
+                  HasUnevenRows="true"
+                  IsPullToRefreshEnabled="true"
+                  Refreshing="Handle_Refreshing"
+                  IsGroupingEnabled="true"
+                  GroupDisplayBinding="{Binding Title}"
+                  GroupShortNameBinding="{Binding ShortTitle}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<TextCell Text="{Binding Name}"
+                              Detail="{Binding Status}"></TextCell>-->
+                    <!--<ImageCell Text="{Binding Name}" 
+                               TextColor="Maroon"
+                               Detail="{Binding Status}" 
+                               DetailColor="Red"
+                               ImageSource="{Binding ImageURL}"></ImageCell>-->
+                    <!--<EntryCell Label="Name" Text="{Binding Name}" Placeholder="Enter your name"  ></EntryCell>-->
+                    <!--<SwitchCell Text="{Binding Name}" On="false"></SwitchCell>-->
+
+                    <ViewCell Height="60" Tapped="Cell_Handle_Tapped">
+                        <StackLayout x:Name="dataStackLayout" Orientation="Horizontal" Padding="5">
+                            <Image Source="{Binding ImageURL}"
+                                   WidthRequest="50"
+                                   HeightRequest="50"></Image>
+                            <StackLayout HorizontalOptions="StartAndExpand" 
+                                         VerticalOptions="Center">
+                                <Label Text="{Binding Name}"
+                                       TextColor="Black"></Label>
+                                <Label Text="{Binding Status}"
+                                       LineBreakMode="TailTruncation"
+                                       TextColor="Gray"></Label>
+                            </StackLayout>
+                            <!--<Button Text="{Binding FollowStatus}"
+                                    CommandParameter="{Binding .}"
+                                    Clicked="Handle_Clicked"></Button>-->
+                            <AbsoluteLayout>
+                                <Button Text="{Binding FollowStatus}"
+                                        Command="{Binding FollowCommand}"></Button>
+                                <ActivityIndicator IsRunning="true"
+                                                   IsVisible="{Binding IsBusy}"
+                                                   AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.5, 0.5"
+                                                   AbsoluteLayout.LayoutFlags="All">
+                                    <ActivityIndicator.Color>
+                                        <OnPlatform x:TypeArguments="Color" iOS="Black"></OnPlatform>
+                                    </ActivityIndicator.Color>
+                                </ActivityIndicator>
+                            </AbsoluteLayout>
+                        </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Message" Command="{Binding MessageCommand}"></MenuItem>
+                            <MenuItem Text="Delete" IsDestructive="true"></MenuItem>
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

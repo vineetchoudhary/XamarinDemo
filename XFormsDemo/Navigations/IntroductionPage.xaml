@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:NavigationRootPage Title="Introduction"
+                          xmlns="http://xamarin.com/schemas/2014/forms" 
+                          xmlns:views="clr-namespace:XFormsDemo.Navigations"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                          x:Class="XFormsDemo.Navigations.IntroductionPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Navigation Introduction"></Label>
+        <Button Text="Next" Clicked="Handle_Next_Button_Clicked"></Button>
+    </StackLayout>
+</views:NavigationRootPage>
