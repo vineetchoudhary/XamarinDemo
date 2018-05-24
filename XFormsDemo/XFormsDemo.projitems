@@ -115,6 +115,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Navigations\NavigationProblemPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Navigations\NPProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Navigations\NPActivityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Navigations\NPUserProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -202,6 +218,19 @@
     <Compile Include="$(MSBuildThisFileDirectory)AlertActionSheet\AlertActionSheetPage.xaml.cs">
       <DependentUpon>AlertActionSheetPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Navigations\NavigationProblemPage.xaml.cs">
+      <DependentUpon>NavigationProblemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Navigations\NPProfilePage.xaml.cs">
+      <DependentUpon>NPProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Navigations\NPActivityPage.xaml.cs">
+      <DependentUpon>NPActivityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Navigations\NPUserProfilePage.xaml.cs">
+      <DependentUpon>NPUserProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Navigations\Models\NPActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
@@ -213,5 +242,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)TabBarView\" />
     <Folder Include="$(MSBuildThisFileDirectory)Carousel\" />
     <Folder Include="$(MSBuildThisFileDirectory)AlertActionSheet\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Navigations\Models\" />
   </ItemGroup>
 </Project>

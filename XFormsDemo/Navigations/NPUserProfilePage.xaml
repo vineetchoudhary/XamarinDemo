@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="{Binding Name}" 
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.Navigations.NPUserProfilePage"
+             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    <StackLayout HorizontalOptions="Center">
+        <Label FontSize="20" 
+               Text="{Binding Name}" 
+               HorizontalOptions="CenterAndExpand"></Label>
+        <ic:CircleImage Source="{Binding Image}"
+                        HeightRequest="200"
+                        WidthRequest="200"></ic:CircleImage>
+        <Label Text="{Binding Name, StringFormat='My name is {0}' }"
+               HorizontalOptions="CenterAndExpand"></Label>
+    </StackLayout>
+</ContentPage>

@@ -150,6 +150,14 @@
     <ImageAsset Include="Resources\Media.xcassets\rightarrow.imageset\Contents.json" />
     <ImageAsset Include="Resources\Media.xcassets\rightarrow.imageset\rightarrow%402x.png" />
     <ImageAsset Include="Resources\Media.xcassets\rightarrow.imageset\rightarrow%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\heart.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\user.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\user.imageset\user.png" />
+    <ImageAsset Include="Resources\Media.xcassets\user.imageset\user%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\user.imageset\user%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\heart.imageset\heart.png" />
+    <ImageAsset Include="Resources\Media.xcassets\heart.imageset\heart%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\heart.imageset\heart%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -162,9 +170,6 @@
     <PackageReference Include="Xamarin.TestCloud.Agent">
       <Version>0.21.5</Version>
     </PackageReference>
-    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
-      <Version>2.0.2</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
       <Version>1.6.1</Version>
     </PackageReference>
@@ -174,11 +179,16 @@
     <PackageReference Include="Microsoft.AppCenter">
       <Version>1.6.1</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Media.xcassets\clock.imageset\" />
     <Folder Include="Resources\Media.xcassets\leftarrow.imageset\" />
     <Folder Include="Resources\Media.xcassets\rightarrow.imageset\" />
+    <Folder Include="Resources\Media.xcassets\heart.imageset\" />
+    <Folder Include="Resources\Media.xcassets\user.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\XFormsDemo\XFormsDemo.projitems" Label="Shared" />

@@ -16,7 +16,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
 
-			MainPage = new AlertActionSheetPage();
+			MainPage = new NavigationProblemPage();
         }
 
         protected override void OnStart()

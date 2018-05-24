@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XFormsDemo.AlertActionSheet.AlertActionSheetPage">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+<ContentPage Title="Hello" 
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.AlertActionSheet.AlertActionSheetPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Hello" Icon="clock.png" Order="Primary"></ToolbarItem>
+        <ToolbarItem Text="Hello" Icon="clock.png" Order="Primary"></ToolbarItem>
+        <ToolbarItem Text="Hello Secondary" Icon="clock.png" Order="Secondary"></ToolbarItem>
+        <ToolbarItem Text="Hello Secondary" Icon="clock.png" Order="Secondary"></ToolbarItem>
+        <ToolbarItem Text="Hello Secondary" Icon="clock.png" Order="Secondary"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout HorizontalOptions="Center" 
+                 VerticalOptions="Center">
         <Button Text="Alert" Clicked="Handle_Alert_Clicked"></Button>
         <Button Text="Action Sheet" Clicked="Handle_ActionSheet_Clicked"></Button>
     </StackLayout>
