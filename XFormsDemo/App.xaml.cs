@@ -4,6 +4,7 @@ using Xamarin.Forms.Xaml;
 using XFormsDemo.Navigations;
 using XFormsDemo.MasterDetails;
 using XFormsDemo.TabBarView;
+using XFormsDemo.Carousel;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XFormsDemo
@@ -14,7 +15,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
 
-			MainPage = new TabBarPage();
+			MainPage = new MainCarouselPage();
         }
 
         protected override void OnStart()
