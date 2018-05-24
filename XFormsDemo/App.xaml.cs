@@ -5,6 +5,7 @@ using XFormsDemo.Navigations;
 using XFormsDemo.MasterDetails;
 using XFormsDemo.TabBarView;
 using XFormsDemo.Carousel;
+using XFormsDemo.AlertActionSheet;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XFormsDemo
@@ -15,7 +16,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
 
-			MainPage = new MainCarouselPage();
+			MainPage = new AlertActionSheetPage();
         }
 
         protected override void OnStart()

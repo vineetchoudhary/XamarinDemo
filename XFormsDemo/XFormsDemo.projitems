@@ -111,6 +111,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)AlertActionSheet\AlertActionSheetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -195,6 +199,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Carousel\MainCarouselPage.xaml.cs">
       <DependentUpon>MainCarouselPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AlertActionSheet\AlertActionSheetPage.xaml.cs">
+      <DependentUpon>AlertActionSheetPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
@@ -205,5 +212,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)MasterDetails\" />
     <Folder Include="$(MSBuildThisFileDirectory)TabBarView\" />
     <Folder Include="$(MSBuildThisFileDirectory)Carousel\" />
+    <Folder Include="$(MSBuildThisFileDirectory)AlertActionSheet\" />
   </ItemGroup>
 </Project>
