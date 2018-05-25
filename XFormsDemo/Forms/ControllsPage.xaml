@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.Forms.ControllsPage"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             Padding="20">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Parent="10">
+                <Switch x:Name="xSwitch" Toggled="Handle_Toggled"></Switch>
+                <Label Text="{Binding Source={x:Reference xSwitch}, Path=IsToggled, StringFormat='Switch is {0}'}"></Label>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" Padding="10">
+                <Slider x:Name="xSlider" Minimum="0" Maximum="100" ValueChanged="Handle_ValueChanged"></Slider>
+                <Label Text="{Binding Source={x:Reference xSlider}, Path=Value, StringFormat='Current value is {0:N0}'}"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Stepper x:Name="xStepper" Maximum="100" Minimum="10" Value="10" Increment="10" ValueChanged="Handle_ValueChanged_1"></Stepper>
+                <Label Text="{Binding Source={x:Reference xStepper}, Path=Value, StringFormat='Current value is {0}'}"></Label>
+            </StackLayout>
+            <StackLayout>
+                <Entry Placeholder="Name" Keyboard="Default"></Entry>
+                <Entry Placeholder="Number" Keyboard="Telephone"></Entry>
+                <Entry Placeholder="Email" Keyboard="Email"></Entry>
+                <Entry Placeholder="Password" Keyboard="Default" IsPassword="true"></Entry>
+                <Editor HeightRequest="80"></Editor>
+            </StackLayout>
+            <StackLayout>
+                <Picker Title="Select word">
+                    <Picker.Items>
+                        <x:String>Hello</x:String>
+                        <x:String>from</x:String>
+                        <x:String>the</x:String>
+                        <x:String>other</x:String>
+                        <x:String>side.</x:String>
+                    </Picker.Items>
+                </Picker>
+                <DatePicker Date="{x:Static sys:DateTime.Today}"
+                            Format="dd/MM/yyyy"
+                            MinimumDate="01/01/2018"
+                            MaximumDate="01/01/2019"></DatePicker>
+                <TimePicker></TimePicker>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

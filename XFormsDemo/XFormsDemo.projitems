@@ -131,6 +131,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Forms\ControllsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -231,6 +235,9 @@
       <DependentUpon>NPUserProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Navigations\Models\NPActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Forms\ControllsPage.xaml.cs">
+      <DependentUpon>ControllsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
@@ -243,5 +250,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Carousel\" />
     <Folder Include="$(MSBuildThisFileDirectory)AlertActionSheet\" />
     <Folder Include="$(MSBuildThisFileDirectory)Navigations\Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Forms\" />
   </ItemGroup>
 </Project>

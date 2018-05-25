@@ -1,11 +1,7 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using XFormsDemo.Navigations;
-using XFormsDemo.MasterDetails;
-using XFormsDemo.TabBarView;
-using XFormsDemo.Carousel;
-using XFormsDemo.AlertActionSheet;
+using XFormsDemo.Forms;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XFormsDemo
@@ -16,7 +12,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
 
-			MainPage = new NavigationProblemPage();
+			MainPage = new ControllsPage();
         }
 
         protected override void OnStart()

@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using ImageCircle.Forms.Plugin.iOS;
+using Lottie.Forms.iOS.Renderers;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
@@ -32,6 +33,7 @@ namespace XFormsDemo.iOS
 
             LoadApplication(new App());
 			AppCenter.Start("fd753d57-8fae-4977-91f3-df889f2db996", typeof(Analytics), typeof(Crashes));
+			AnimationViewRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }
