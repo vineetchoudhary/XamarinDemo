@@ -135,6 +135,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Forms\TableViewFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -237,6 +241,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Navigations\Models\NPActivity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Forms\ControllsPage.xaml.cs">
       <DependentUpon>ControllsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Forms\TableViewFormPage.xaml.cs">
+      <DependentUpon>TableViewFormPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -193,6 +193,9 @@
     <Folder Include="Resources\Media.xcassets\heart.imageset\" />
     <Folder Include="Resources\Media.xcassets\user.imageset\" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\notification_request.json" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\XFormsDemo\XFormsDemo.projitems" Label="Shared" />
 </Project>

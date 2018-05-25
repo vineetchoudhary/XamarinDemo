@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.Forms.TableViewFormPage"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms">
+    <AbsoluteLayout>
+        <TableView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All"
+                   HasUnevenRows="true">
+            <TableRoot>
+                <TableSection Title="Basics">
+                    <TextCell Text="Name" Detail="Vineet Choudhary"></TextCell>
+                    <EntryCell Label="Team" Placeholder="(eg iOS)"></EntryCell>
+                    <SwitchCell Text="Notification" On="false" OnChanged="Handle_OnChanged"></SwitchCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="15, 5">
+                            <Label Text="Start" VerticalOptions="Center"></Label>
+                            <DatePicker Date="01/10/2018" HorizontalOptions="EndAndExpand"></DatePicker>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <StackLayout x:Name="notificationAnimationStack" 
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All"
+                     IsVisible="false"
+                     BackgroundColor="White">
+            <lottie:AnimationView x:Name="notificationAnimation" 
+                                  Animation="notification_request.json"
+                                  AutoPlay="false"
+                                  Loop="false"
+                                  Duration="3"
+                                  OnFinish="Handle_OnFinish"
+                                  HorizontalOptions="Center"
+                                  VerticalOptions="Center"
+                                  Opacity="1">
+            </lottie:AnimationView>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

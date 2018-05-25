@@ -11,8 +11,8 @@ namespace XFormsDemo
         public App()
         {
             InitializeComponent();
-
-			MainPage = new ControllsPage();
+            
+			MainPage = new TableViewFormPage();
         }
 
         protected override void OnStart()
