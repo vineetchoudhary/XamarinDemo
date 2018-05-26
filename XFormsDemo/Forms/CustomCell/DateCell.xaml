@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+          x:Class="XFormsDemo.Forms.CustomCell.DateCell">
+    <StackLayout Orientation="Horizontal" Padding="15, 5">
+        <Label Text="{Binding Label}" VerticalOptions="Center"></Label>
+        <DatePicker Date="{Binding DefaultDate}" HorizontalOptions="EndAndExpand"></DatePicker>
+    </StackLayout>
+</ViewCell>

@@ -139,6 +139,30 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Forms\CustomCell\DateCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Forms\ContactMethodsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Common\Loader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DataAccess\ApplicationPropertiesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DataAccess\RecipeDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DataAccess\Rest\RestPostPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -245,6 +269,29 @@
     <Compile Include="$(MSBuildThisFileDirectory)Forms\TableViewFormPage.xaml.cs">
       <DependentUpon>TableViewFormPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Forms\CustomCell\DateCell.xaml.cs">
+      <DependentUpon>DateCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Forms\ContactMethodsPage.xaml.cs">
+      <DependentUpon>ContactMethodsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Loader.xaml.cs">
+      <DependentUpon>Loader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\ApplicationPropertiesPage.xaml.cs">
+      <DependentUpon>ApplicationPropertiesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\AppSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Persistence\ISQLiteDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Recipe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\RecipeDetailsPage.xaml.cs">
+      <DependentUpon>RecipeDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Rest\Post.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Rest\RestPostPage.xaml.cs">
+      <DependentUpon>RestPostPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Rest\PostManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
@@ -258,5 +305,10 @@
     <Folder Include="$(MSBuildThisFileDirectory)AlertActionSheet\" />
     <Folder Include="$(MSBuildThisFileDirectory)Navigations\Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Forms\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Forms\CustomCell\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Common\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataAccess\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Persistence\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Rest\" />
   </ItemGroup>
 </Project>

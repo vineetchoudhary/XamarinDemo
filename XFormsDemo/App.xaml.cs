@@ -1,6 +1,8 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XFormsDemo.DataAccess;
+using XFormsDemo.DataAccess.Rest;
 using XFormsDemo.Forms;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -12,7 +14,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
             
-			MainPage = new TableViewFormPage();
+			MainPage = new NavigationPage(new RestPostPage());
         }
 
         protected override void OnStart()

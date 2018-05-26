@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.DataAccess.ApplicationPropertiesPage">
+    <TableView>
+        <TableRoot>
+            <TableSection Title="User Settings">
+                <EntryCell Text="{Binding CompanyName}" 
+                           Label="Company Name" 
+                           Placeholder="eg Finoit Inc" 
+                           HorizontalTextAlignment="End"></EntryCell>
+                <SwitchCell Text="Comapny Active" 
+                            On="{Binding CompanyStatus}"></SwitchCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Posts" 
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.DataAccess.Rest.RestPostPage"
+             xmlns:common="clr-namespace:XFormsDemo.Common">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddPostCommand}"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <AbsoluteLayout>
+        <ListView ItemsSource="{Binding Posts}" 
+                  HasUnevenRows="true"
+                  AbsoluteLayout.LayoutBounds="0,0,1,1"
+                  AbsoluteLayout.LayoutFlags="All"
+                  IsPullToRefreshEnabled="true"
+                  RefreshCommand="{Binding RefreshListCommand}"
+                  IsRefreshing="{Binding IsRefreshing}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding title}" TextColor="Black" LineBreakMode="WordWrap" FontSize="16"></Label>
+                            <Label Text="{Binding content}" LineBreakMode="WordWrap" FontSize="13"></Label>
+                            <Label Text="{Binding author}" TextColor="Gray" FontSize="10"></Label>
+                        </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete" Command=""></MenuItem>
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <common:Loader IsVisible="{Binding IsBusy}"
+                       AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                       AbsoluteLayout.LayoutFlags="All"></common:Loader>
+    </AbsoluteLayout>
+    
+</ContentPage>

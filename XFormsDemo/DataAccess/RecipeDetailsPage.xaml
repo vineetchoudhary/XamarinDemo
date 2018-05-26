@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Recipe" 
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.DataAccess.RecipeDetailsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete" Clicked="Handle_Delete_Clicked"></ToolbarItem>
+        <ToolbarItem Text="Update" Clicked="Handle_Update_Clicked"></ToolbarItem>
+        <ToolbarItem Text="Add" Clicked="Handle_Add_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="recipeListView" HasUnevenRows="true">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="10" HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label Text="{Binding Name}" LineBreakMode="WordWrap"></Label>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
