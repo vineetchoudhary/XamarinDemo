@@ -1,9 +1,7 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using XFormsDemo.DataAccess;
-using XFormsDemo.DataAccess.Rest;
-using XFormsDemo.Forms;
+using XFormsDemo.DataAccess.Netflix;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XFormsDemo
@@ -14,7 +12,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
             
-			MainPage = new NavigationPage(new RestPostPage());
+            MainPage = new NavigationPage(new MovieListPage());
         }
 
         protected override void OnStart()

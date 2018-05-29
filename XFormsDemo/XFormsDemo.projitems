@@ -163,6 +163,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\MovieListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\MovieDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -292,6 +300,18 @@
       <DependentUpon>RestPostPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Rest\PostManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\MovieListPage.xaml.cs">
+      <DependentUpon>MovieListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\MovieDetailsPage.xaml.cs">
+      <DependentUpon>MovieDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\ViewModels\MovieListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Models\MovieDetails.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\NetflixConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Common\BaseClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Common\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Models\PageDetails.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
@@ -310,5 +330,9 @@
     <Folder Include="$(MSBuildThisFileDirectory)DataAccess\" />
     <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Persistence\" />
     <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Rest\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Common\" />
   </ItemGroup>
 </Project>

@@ -115,6 +115,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\rightarrow.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\heart.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\user.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hearts.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

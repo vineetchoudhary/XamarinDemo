@@ -151,11 +151,13 @@
     <ImageAsset Include="Resources\Media.xcassets\rightarrow.imageset\Contents.json" />
     <ImageAsset Include="Resources\Media.xcassets\rightarrow.imageset\rightarrow%402x.png" />
     <ImageAsset Include="Resources\Media.xcassets\rightarrow.imageset\rightarrow%403x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\heart.imageset\Contents.json" />
     <ImageAsset Include="Resources\Media.xcassets\user.imageset\Contents.json" />
     <ImageAsset Include="Resources\Media.xcassets\user.imageset\user.png" />
     <ImageAsset Include="Resources\Media.xcassets\user.imageset\user%402x.png" />
     <ImageAsset Include="Resources\Media.xcassets\user.imageset\user%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\hearts.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\hearts.imageset\hearts.png" />
+    <ImageAsset Include="Resources\Media.xcassets\heart.imageset\Contents.json" />
     <ImageAsset Include="Resources\Media.xcassets\heart.imageset\heart.png" />
     <ImageAsset Include="Resources\Media.xcassets\heart.imageset\heart%402x.png" />
     <ImageAsset Include="Resources\Media.xcassets\heart.imageset\heart%403x.png" />
@@ -202,10 +204,11 @@
     <Folder Include="Resources\Media.xcassets\clock.imageset\" />
     <Folder Include="Resources\Media.xcassets\leftarrow.imageset\" />
     <Folder Include="Resources\Media.xcassets\rightarrow.imageset\" />
-    <Folder Include="Resources\Media.xcassets\heart.imageset\" />
     <Folder Include="Resources\Media.xcassets\user.imageset\" />
     <Folder Include="DataAccess\" />
     <Folder Include="DataAccess\Persistence\" />
+    <Folder Include="Resources\Media.xcassets\hearts.imageset\" />
+    <Folder Include="Resources\Media.xcassets\heart.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\notification_request.json" />
