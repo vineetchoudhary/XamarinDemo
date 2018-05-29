@@ -8,7 +8,8 @@
         <ToolbarItem Text="Add" Command="{Binding AddPostCommand}"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <AbsoluteLayout>
-        <ListView ItemsSource="{Binding Posts}" 
+        <ListView x:Name="listView" 
+                  ItemsSource="{Binding Posts}" 
                   HasUnevenRows="true"
                   AbsoluteLayout.LayoutBounds="0,0,1,1"
                   AbsoluteLayout.LayoutFlags="All"
@@ -24,7 +25,10 @@
                             <Label Text="{Binding author}" TextColor="Gray" FontSize="10"></Label>
                         </StackLayout>
                         <ViewCell.ContextActions>
-                            <MenuItem Text="Delete" Command=""></MenuItem>
+                            <MenuItem Text="Delete" 
+                                      IsDestructive="true"
+                                      Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference listView}}" 
+                                      CommandParameter="{Binding .}"></MenuItem>
                         </ViewCell.ContextActions>
                     </ViewCell>
                 </DataTemplate>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace XFormsDemo.DataAccess.Rest
 {
@@ -9,8 +10,8 @@ namespace XFormsDemo.DataAccess.Rest
     {
         public RestPostPage()
 		{
-            InitializeComponent();
-			BindingContext = PostManager.Default;
+            InitializeComponent();			
+            BindingContext = PostManager.Default;
         }
 
     }
