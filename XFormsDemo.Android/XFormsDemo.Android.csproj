@@ -140,6 +140,7 @@
     <AndroidAsset Include="Assets\wolf_watch_bottom.json" />
     <AndroidAsset Include="Assets\cat.json" />
     <AndroidAsset Include="Assets\confetti.json" />
+    <AndroidAsset Include="Assets\preloader.json" />
   </ItemGroup>
   <Import Project="..\XFormsDemo\XFormsDemo.projitems" Label="Shared" />
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

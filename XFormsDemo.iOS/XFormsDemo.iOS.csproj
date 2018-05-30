@@ -223,6 +223,12 @@
     <BundleResource Include="Resources\notification_request.json" />
     <BundleResource Include="Resources\material_wave_loading.json" />
     <BundleResource Include="Resources\noodles.json" />
+    <BundleResource Include="Resources\cat.json" />
+    <BundleResource Include="Resources\confetti.json" />
+    <BundleResource Include="Resources\preloader.json" />
+    <BundleResource Include="Resources\wolf_boo.json" />
+    <BundleResource Include="Resources\wolf_peek.json" />
+    <BundleResource Include="Resources\wolf_watch_bottom.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\XFormsDemo\XFormsDemo.projitems" Label="Shared" />

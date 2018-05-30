@@ -9,7 +9,7 @@
                  Opacity="0.7">
     </ContentView>
     <lottie:AnimationView x:Name="notificationAnimation" 
-                          Animation="noodles.json"
+                          Animation="preloader.json"
                           AutoPlay="true"
                           Loop="true"
                           BackgroundColor="Transparent"
