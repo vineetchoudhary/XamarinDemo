@@ -12,6 +12,7 @@ using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Lottie.Forms.Droid;
 using System.Threading.Tasks;
+using FFImageLoading.Forms.Platform;
 
 namespace XFormsDemo.Droid
 {
@@ -25,6 +26,7 @@ namespace XFormsDemo.Droid
             base.OnCreate(bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             ImageCircleRenderer.Init();
+            CachedImageRenderer.Init(true);
             AppCenter.Start("c5e1f818-85ec-4f7e-8ec6-4c66ab822789", typeof(Analytics), typeof(Crashes));
             AnimationViewRenderer.Init();
             LoadApplication(new App());

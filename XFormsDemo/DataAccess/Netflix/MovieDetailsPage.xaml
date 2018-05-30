@@ -2,16 +2,19 @@
 <ContentPage Title="{Binding Title}" 
              xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="XFormsDemo.DataAccess.Netflix.MovieDetailsPage">
+             x:Class="XFormsDemo.DataAccess.Netflix.MovieDetailsPage"
+             xmlns:ffImage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
     <ScrollView>
         <RelativeLayout>
-            <Image x:Name="posterImage" 
-                   Source="{Binding LargeImageUrl}" 
-                   Aspect="AspectFill"
-                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0}"
-                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0}"
-                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.4}"></Image>
+            <ffImage:CachedImage x:Name="posterImage" 
+                                 LoadingPlaceholder="loading.png"
+                                 Source="{Binding LargeImageUrl}" 
+                                 Aspect="AspectFill"
+                                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0}"
+                                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0}"
+                                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.4}"></ffImage:CachedImage >
+            
             <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0}"
                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=posterImage, Property=Height, Factor=1, Constant=0}"
                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
@@ -30,9 +33,9 @@
                     <StackLayout Grid.Row="0" Grid.Column="1">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="hearts.png" HeightRequest="20" WidthRequest="20"></Image>
-                            <Label Text="{Binding Path=VoteAvg, StringFormat='{0:#}/10'}" Font="20" FontAttributes="Bold" TextColor="Black"></Label>
+                            <Label Text="{Binding Path=VoteAvg, StringFormat='{0:0}/10'}" Font="20" FontAttributes="Bold" TextColor="Black"></Label>
                         </StackLayout>
-                        <Label Text="{Binding Path=VoteCount, StringFormat='{0} votes'}"></Label>
+                        <Label Text="{Binding Path=VoteCount, StringFormat='{0} votes'}" HorizontalTextAlignment="End"></Label>
                     </StackLayout>
                 </Grid>
                 <StackLayout BackgroundColor="#F0F0F0" Padding="10" VerticalOptions="FillAndExpand">

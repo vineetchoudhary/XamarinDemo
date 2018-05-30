@@ -80,6 +80,9 @@
     <PackageReference Include="System.Net.Http">
       <Version>4.3.3</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.1.823</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -116,6 +119,8 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\heart.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\user.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\hearts.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\loading.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\loading_small.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -129,6 +134,12 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\notification_request.json" />
     <AndroidAsset Include="Assets\material_wave_loading.json" />
+    <AndroidAsset Include="Assets\noodles.json" />
+    <AndroidAsset Include="Assets\wolf_boo.json" />
+    <AndroidAsset Include="Assets\wolf_peek.json" />
+    <AndroidAsset Include="Assets\wolf_watch_bottom.json" />
+    <AndroidAsset Include="Assets\cat.json" />
+    <AndroidAsset Include="Assets\confetti.json" />
   </ItemGroup>
   <Import Project="..\XFormsDemo\XFormsDemo.projitems" Label="Shared" />
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

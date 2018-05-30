@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FFImageLoading.Forms.Platform;
 using Foundation;
 using ImageCircle.Forms.Plugin.iOS;
 using Lottie.Forms.iOS.Renderers;
@@ -30,6 +30,7 @@ namespace XFormsDemo.iOS
             Xamarin.Calabash.Start();
             global::Xamarin.Forms.Forms.Init();
 			ImageCircleRenderer.Init();
+            CachedImageRenderer.Init();
 
             LoadApplication(new App());
 			AppCenter.Start("fd753d57-8fae-4977-91f3-df889f2db996", typeof(Analytics), typeof(Crashes));

@@ -29,5 +29,10 @@ namespace XFormsDemo.DataAccess.Netflix
             Navigation.PushAsync(new MovieDetailsPage(e.SelectedItem as MovieDetails));
             moviewListView.SelectedItem = null;
         }
+
+        void Handle_Login_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushModalAsync(new LoginPage());
+        }
     }
 }

@@ -161,6 +161,10 @@
     <ImageAsset Include="Resources\Media.xcassets\heart.imageset\heart.png" />
     <ImageAsset Include="Resources\Media.xcassets\heart.imageset\heart%402x.png" />
     <ImageAsset Include="Resources\Media.xcassets\heart.imageset\heart%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\loading.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\loading.imageset\loading.png" />
+    <ImageAsset Include="Resources\Media.xcassets\loading-small.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\loading-small.imageset\loading_small.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -199,6 +203,9 @@
     <PackageReference Include="System.Net.Http">
       <Version>4.3.3</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.1.823</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Media.xcassets\clock.imageset\" />
@@ -209,10 +216,13 @@
     <Folder Include="DataAccess\Persistence\" />
     <Folder Include="Resources\Media.xcassets\hearts.imageset\" />
     <Folder Include="Resources\Media.xcassets\heart.imageset\" />
+    <Folder Include="Resources\Media.xcassets\loading.imageset\" />
+    <Folder Include="Resources\Media.xcassets\loading-small.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\notification_request.json" />
     <BundleResource Include="Resources\material_wave_loading.json" />
+    <BundleResource Include="Resources\noodles.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\XFormsDemo\XFormsDemo.projitems" Label="Shared" />

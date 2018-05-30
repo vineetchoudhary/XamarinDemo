@@ -4,6 +4,7 @@ using Xamarin.Forms.Xaml;
 using XFormsDemo.DataAccess.Netflix;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+
 namespace XFormsDemo
 {
     public partial class App : Application

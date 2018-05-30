@@ -9,10 +9,10 @@ namespace XFormsDemo.DataAccess.Netflix.Models
     {
         #region Private Properties
         private int _id;
-        private int _voteCount;
-        private float _voteAvg;
+        private int _voteCount = 0;
+        private float _voteAvg = 0;
         private string _title;
-        private float _popularity;
+        private float _popularity = 0;
         private string _language;
         private string _imageUrl;
         private string _backdropPath;

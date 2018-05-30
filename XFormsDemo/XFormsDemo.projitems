@@ -171,6 +171,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Loader\LoaderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -312,6 +320,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Common\BaseClass.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Common\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Models\PageDetails.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Loader\LoaderPage.xaml.cs">
+      <DependentUpon>LoaderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
@@ -334,5 +348,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Common\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\Loader\" />
   </ItemGroup>
 </Project>

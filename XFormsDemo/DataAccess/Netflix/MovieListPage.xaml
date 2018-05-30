@@ -2,33 +2,68 @@
 <ContentPage Title="Netflix Movie Search" 
              xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="XFormsDemo.DataAccess.Netflix.MovieListPage">
-    <StackLayout>
-        <SearchBar x:Name="searchBar" 
-                   Placeholder="Search Netflix Movies" 
-                   SearchCommand="{Binding SearchCommand}" 
-                   SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"></SearchBar>
-        <ListView x:Name="moviewListView" 
-                  RowHeight="60" 
-                  ItemsSource="{Binding Movies}"
-                  ItemSelected="Handle_ItemSelected">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" 
-                                     Padding="5">
-                            <Image HeightRequest="50" 
-                                   WidthRequest="40"
-                                   Source="{Binding SmallImageUrl}"></Image>
-                            <StackLayout Orientation="Vertical" 
+             x:Class="XFormsDemo.DataAccess.Netflix.MovieListPage"
+             xmlns:loader="clr-namespace:XFormsDemo.DataAccess.Netflix.Loader"
+             xmlns:ffImage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Login" Clicked="Handle_Login_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                     AbsoluteLayout.LayoutFlags="All">
+            <!--Search Bar-->
+            <SearchBar x:Name="searchBar" 
+                       Placeholder="Search Netflix Movies" 
+                       SearchCommand="{Binding SearchCommand}" 
+                       SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"></SearchBar>
+
+            <!--Empty List-->
+            <StackLayout HorizontalOptions="Center" 
+                         VerticalOptions="Center"
+                         IsVisible="{Binding IsEmpty}">
+                <lottie:AnimationView WidthRequest="200" 
+                                      HeightRequest="200"
+                                      Animation="confetti.json"
+                                      HorizontalOptions="Fill"
+                                      VerticalOptions="Fill"
+                                      AutoPlay="true"
+                                      Loop="true"></lottie:AnimationView>
+                <Label Text="no match found" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            <!--Movies List View-->
+            <ListView x:Name="moviewListView" 
+                      RowHeight="60" 
+                      ItemsSource="{Binding Movies}"
+                      ItemSelected="Handle_ItemSelected"
+                      IsVisible="{Binding IsNotEmpty}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <!--Movie View Cell-->
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" 
                                          Padding="5">
-                                <Label Text="{Binding Title}"></Label>
-                                <Label Text="{Binding ReleaseDate}"></Label>
+                                <ffImage:CachedImage HeightRequest="50" 
+                                                     WidthRequest="40"
+                                                     LoadingPlaceholder="loading_small.png"
+                                                     Source="{Binding SmallImageUrl}"></ffImage:CachedImage>
+                                <StackLayout Orientation="Vertical" 
+                                             Padding="5">
+                                    <Label Text="{Binding Title}" LineBreakMode="NoWrap"></Label>
+                                    <Label Text="{Binding ReleaseDate}"></Label>
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <!--Loader-->
+        <loader:LoaderPage AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                           AbsoluteLayout.LayoutFlags="All"
+                           IsVisible="{Binding IsBusy}"></loader:LoaderPage>
+    </AbsoluteLayout>
 </ContentPage>
