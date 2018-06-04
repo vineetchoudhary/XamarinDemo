@@ -3,6 +3,7 @@ using XFormsDemo.DataAccess.Netflix.Common;
 using System.Collections.Generic;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
+using System.Collections.ObjectModel;
 
 namespace XFormsDemo.DataAccess.Netflix.Models
 {
@@ -11,7 +12,7 @@ namespace XFormsDemo.DataAccess.Netflix.Models
         private int _page;
         private int _totalResults;
         private int _totalPages;
-        private List<T> _results;
+        private ObservableCollection<T> _results;
 
         [JsonProperty("page")]
         public int CurrentPage
@@ -34,7 +35,7 @@ namespace XFormsDemo.DataAccess.Netflix.Models
             set { SetValue(ref _totalPages, value); }
         }
 
-        public List<T> Results
+        public ObservableCollection<T> Results
         {
             get { return _results; }
             set { SetValue(ref _results, value); }

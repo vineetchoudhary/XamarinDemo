@@ -34,5 +34,10 @@ namespace XFormsDemo.DataAccess.Netflix
         {
             Navigation.PushModalAsync(new LoginPage());
         }
+
+        void Handle_ItemAppearing(object sender, Xamarin.Forms.ItemVisibilityEventArgs e)
+        {
+            ViewModel.LoadMoreCommand.Execute(e.Item as MovieDetails);
+        }
     }
 }

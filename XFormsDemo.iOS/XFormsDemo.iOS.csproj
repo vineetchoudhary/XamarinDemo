@@ -165,6 +165,8 @@
     <ImageAsset Include="Resources\Media.xcassets\loading.imageset\loading.png" />
     <ImageAsset Include="Resources\Media.xcassets\loading-small.imageset\Contents.json" />
     <ImageAsset Include="Resources\Media.xcassets\loading-small.imageset\loading_small.png" />
+    <ImageAsset Include="Resources\Media.xcassets\imgnotavailable.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\imgnotavailable.imageset\imgnotavailable.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -206,6 +208,9 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.1.823</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Extended.InfiniteScrolling">
+      <Version>1.0.0-preview2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Media.xcassets\clock.imageset\" />
@@ -218,6 +223,7 @@
     <Folder Include="Resources\Media.xcassets\heart.imageset\" />
     <Folder Include="Resources\Media.xcassets\loading.imageset\" />
     <Folder Include="Resources\Media.xcassets\loading-small.imageset\" />
+    <Folder Include="Resources\Media.xcassets\imgnotavailable.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\notification_request.json" />

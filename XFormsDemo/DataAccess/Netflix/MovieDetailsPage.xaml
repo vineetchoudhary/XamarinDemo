@@ -8,6 +8,7 @@
         <RelativeLayout>
             <ffImage:CachedImage x:Name="posterImage" 
                                  LoadingPlaceholder="loading.png"
+                                 ErrorPlaceholder="imgnotavailable.png"
                                  Source="{Binding LargeImageUrl}" 
                                  Aspect="AspectFill"
                                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0}"

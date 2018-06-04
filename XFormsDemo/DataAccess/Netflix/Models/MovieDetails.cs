@@ -2,6 +2,7 @@
 using XFormsDemo.DataAccess.Netflix.Common;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
+using System.Globalization;
 
 namespace XFormsDemo.DataAccess.Netflix.Models
 {
@@ -143,12 +144,9 @@ namespace XFormsDemo.DataAccess.Netflix.Models
             }
         }
 
-        public static string LatestUrl
+        public static string LatestUrl(int page = 1)
         {
-            get
-            {
-                return String.Format("{0}movie/latest?api_key={1}", NetflixConfig.BaseUrl, NetflixConfig.APIKey);
-            }
+            return String.Format("{0}movie/latest?page={1}&api_key={2}", NetflixConfig.BaseUrl, page, NetflixConfig.APIKey);
         }
 
         public static string NowPlayingUrl
@@ -159,12 +157,9 @@ namespace XFormsDemo.DataAccess.Netflix.Models
             }
         }
 
-        public static string PopularUrl
+        public static string PopularUrl(int page = 1)
         {
-            get
-            {
-                return String.Format("{0}movie/popular?api_key={1}", NetflixConfig.BaseUrl, NetflixConfig.APIKey);
-            }
+            return String.Format("{0}movie/popular?page={1}&api_key={2}", NetflixConfig.BaseUrl, page, NetflixConfig.APIKey);
         }
         #endregion
 

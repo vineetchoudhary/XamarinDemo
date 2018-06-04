@@ -83,6 +83,9 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.1.823</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Extended.InfiniteScrolling">
+      <Version>1.0.0-preview2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -121,6 +124,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\hearts.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\loading.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\loading_small.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\imgnotavailable.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

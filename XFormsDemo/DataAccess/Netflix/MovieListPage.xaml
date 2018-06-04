@@ -24,7 +24,7 @@
                          IsVisible="{Binding IsEmpty}">
                 <lottie:AnimationView WidthRequest="200" 
                                       HeightRequest="200"
-                                      Animation="confetti.json"
+                                      Animation="noodles.json"
                                       HorizontalOptions="Fill"
                                       VerticalOptions="Fill"
                                       AutoPlay="true"
@@ -37,7 +37,25 @@
                       RowHeight="60" 
                       ItemsSource="{Binding Movies}"
                       ItemSelected="Handle_ItemSelected"
-                      IsVisible="{Binding IsNotEmpty}">
+                      IsVisible="{Binding IsNotEmpty}"
+                      ItemAppearing="Handle_ItemAppearing">
+
+                <!--Footer-->
+                <ListView.Footer>
+                    <StackLayout Padding="7" IsVisible="{Binding IsLoadingMore}" HorizontalOptions="Center" VerticalOptions="Center">
+                        <StackLayout.Triggers>
+                            <Trigger TargetType="StackLayout" Property="IsVisible" Value="False">
+                                <Setter Property="HeightRequest" Value="0"></Setter>
+                            </Trigger>
+                        </StackLayout.Triggers>
+                        <lottie:AnimationView Animation="material_wave_loading.json" 
+                                              AutoPlay="true" 
+                                              Loop="true"
+                                              HeightRequest="30"></lottie:AnimationView>
+                    </StackLayout>
+                </ListView.Footer>
+                
+                <!--ListView Item Templates-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
 

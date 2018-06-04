@@ -179,6 +179,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SuperMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -325,6 +329,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Netflix\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SuperMainPage.xaml.cs">
+      <DependentUpon>SuperMainPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

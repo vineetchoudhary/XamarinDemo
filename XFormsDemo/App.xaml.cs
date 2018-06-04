@@ -13,7 +13,7 @@ namespace XFormsDemo
         {
             InitializeComponent();
             
-            MainPage = new NavigationPage(new MovieListPage());
+            MainPage = new NavigationPage(new SuperMainPage());
         }
 
         protected override void OnStart()

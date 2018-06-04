@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Xamarin" 
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XFormsDemo.SuperMainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#D9DFE8"></Setter>
+                <Setter Property="TextColor" Value="#7187C5"></Setter>
+                <Setter Property="CornerRadius" Value="5"></Setter>
+                <Setter Property="HeightRequest" Value="44"></Setter>
+                <Setter Property="Margin" Value="6, 3"></Setter>
+                <Setter Property="FontSize" Value="18"></Setter>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="6, 3"></Setter>
+                <Setter Property="TextColor" Value="#FA9D26"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Data Access"></Label>
+            <Button Text="Netflix" Clicked="Handle_Netflix_Clicked"></Button>
+            <Button Text="APIs" Clicked="Handle_APIs_Clicked"></Button>
+            <Button Text="SQLite Recipe" Clicked="Handle_Recipe_Clicked"></Button>
+            <Button Text="App Settings" Clicked="Handle_AppSetting_Clicked"></Button>
+
+            
+            <Label Text="Layouts"></Label>
+            <Button Text="Absolute Layout" Clicked="Handle_Absolute_Layout_Clicked"></Button>
+            <Button Text="Absolute Layout Image" Clicked="Handle_Absolute_Layout_Image_Clicked"></Button>
+            <Button Text="Absolute Layout Payment" Clicked="Handle_Absolute_Layout_Payment_Clicked"></Button>
+            <Button Text="Relative Layout" Clicked="Handle_Relative_Clicked"></Button>
+            <Button Text="Relative Layout Cart" Clicked="Handle_Relative_Cart_Clicked"></Button>
+            <Button Text="Relative Layout Images" Clicked="Handle_Relative_Image_Clicked"></Button>
+            <Button Text="Relative Layout Complex" Clicked="Handle_Relative_Complex_Clicked"></Button>
+            <Button Text="Grid" Clicked="Handle_Grid_Clicked"></Button>
+            <Button Text="Grid Login" Clicked="Handle_Grid_Login_Clicked"></Button>
+            <Button Text="Grid DialPad" Clicked="Handle_Grid_DialPad_Clicked"></Button>
+            <Button Text="List View" Clicked="Handle_List_View_Clicked"></Button>
+            <Button Text="Slact View Insta" Clicked="Handle_Instagram_Clicked"></Button>
+            <Button Text="Slact View Quotes" Clicked="Handle_Quotes_Clicked"></Button>
+            <Button Text="Slact View Login" Clicked="Handle_Stack_Login_Clicked"></Button>
+            
+            <Label Text="Pages"></Label>
+            <Button Text="Carousel" Clicked="Handle_Carousel_Clicked"></Button>
+            <Button Text="Contact Master Details" Clicked="Handle_MasterDetails_Clicked"></Button>
+            <Button Text="Navigations" Clicked="Handle_Navigation_Clicked"></Button>
+            <Button Text="Navigation Problem" Clicked="Handle_Navigation_Problem_Clicked"></Button>
+
+            <Label Text="Controls"></Label>
+            <Button Text="Alert + Action Sheet" Clicked="Handle_Alert_ActionSheet_Clicked"></Button>
+            <Button Text="Tab Bar" Clicked="Handle_TabBar_Clicked"></Button>
+            <Button Text="Mixed Controls" Clicked="Handle_MixedControls_Clicked"></Button>
+            <Button Text="TableView Forms" Clicked="Handle_TableView_Form_Clicked"></Button>
+            <Button Text="Circle Image" Clicked="Handle_CircleImage_Clicked"></Button>
+
+            <Label Text="Others"></Label>
+            <Button Text="iPhone X Safe Area" Clicked="Handle_Safe_Area_Clicked"></Button>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
